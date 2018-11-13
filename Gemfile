@@ -14,6 +14,7 @@ gem 'active_model_serializers'
 gem 'faraday'
 gem 'figaro'
 gem 'faker'
+gem 'jquery-rails'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 
