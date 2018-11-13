@@ -1,3 +1,8 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #404041;
+}
+
 .header {
   background-color: #404041;
   text-align: center;
@@ -17,6 +22,23 @@
   display: inline;
 }
 
-.guess {
-
+.guess_text {
+  color: #EB008B;
 }
+
+.button_selected {
+  background-color: #929497;
+  color: #FFFFFF;
+}
+
+.button_unselected {
+  background-color: #D0D2D3;
+  color: #FFFFFF;
+}
+
+.button_on_hover {
+  background-color: #EB008B;
+  color: #FFFFFF;
+}
+
+
