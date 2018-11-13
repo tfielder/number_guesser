@@ -10,6 +10,9 @@ implement with rails new -T -d postgresql --skip-turbolinks --skip-spring
 #Ignore application configuration
 /config/application.yml
 
+#Ignore VCR cassettes
+/fixtures/vcr_cassettes
+
 #3. Ran bundle
 
-#4. 
+#4.
