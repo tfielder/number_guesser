@@ -15,4 +15,7 @@ implement with rails new -T -d postgresql --skip-turbolinks --skip-spring
 
 #3. Ran bundle
 
-#4.
+#4. Install rspec
+rails generate rspec:install
+
+#5. Configure ShouldaMatchers, VCR, and Simplecov in Rails_helper file.
