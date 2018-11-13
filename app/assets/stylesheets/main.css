@@ -13,8 +13,9 @@ h2 {
 h3 {
   font-family: "Open Sans", sans-serif;
   color: #404041;
-  font-size: 3em;
+  font-size: 10em;
   font-weight: 300;
+  margin: 0;
 }
 
 .header {
