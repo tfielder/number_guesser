@@ -41,7 +41,7 @@ h3 {
   color: #EB008B;
 }
 
-.button_selected {
+/* .button_selected {
   background-color: #929497;
   color: #FFFFFF;
 }
@@ -54,9 +54,32 @@ h3 {
 .button_on_hover {
   background-color: #EB008B;
   color: #FFFFFF;
-}
+} */
 
 .button {
+  color: #FFFFFF;
+  background-color: #929497;
   border-radius: 50px;
+  border-color: 0;
 }
 
+.js-guess-button {
+  color: #FFFFFF;
+  background-color: #929497;
+  border-radius: 50px;
+  border-color: 0;
+}
+
+.js-clear-button {
+  color: #FFFFFF;
+  background-color: #929497;
+  border-radius: 50px;
+  border-color: 0;
+}
+
+.js-reset-button {
+  color: #FFFFFF;
+  background-color: #929497;
+  border-radius: 50px;
+  border-color: 0;
+}

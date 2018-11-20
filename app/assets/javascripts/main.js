@@ -1,7 +1,9 @@
 $(document).ready(function() {
-  console.log("Hey there!");
-  $(".guess-button").on ('click', (function() {
-    alert("You clicked it!");
+  console.log("JavaScript is connected");
+  $(".js-guess-button").click(function() {
+      // event.preventDefault();
+      alert( 'You clicked it!' );
+      console.log ( 'clicked' );
   });
 });
 
