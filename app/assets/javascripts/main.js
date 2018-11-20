@@ -3,17 +3,17 @@ $(document).ready(function() {
   var aRandomNumber = Math.floor((Math.random() * 100) + 1);
   //var userGuess = null;
   $(".js-guess-button, button").click(function() {
-
+    console.log("The random number" + aRandomNumber);
     var userGuess = $('#user-guess').val();
-    //console.log(userGuess);
+    if (userGuess < aRandomNumber) {
+      $('.result-line').text("That is too low");
+    } else if (userGuess > aRandomNumber) {
+      $('.result-line').text("That is too high");
+    } else {
+      $('.result-line').text("You guessed the correct number");
+    }
     //$('#user-guess').text("");
-    $('.first-line').text("Your last guess was:")
+    $('.first-line').text("Your last guess was")
     $('.guess-text').text(userGuess);
   });
 });
-
-//create a var
-//user types in a number
-//checks to see if the number is between 1 to 100
-//stores the number into the var
-//determines if the number is higher or lower
