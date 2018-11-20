@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $(".guess_button").on ('click', (function() {
+  $(".guess-button").on ('click', (function() {
     alert("You clicked it!");
   });
 });
