@@ -1,9 +1,14 @@
 $(document).ready(function() {
   console.log("JavaScript is connected");
-  $(".js-guess-button").click(function() {
-      // event.preventDefault();
-      alert( 'You clicked it!' );
-      console.log ( 'clicked' );
+  var aRandomNumber = Math.floor((Math.random() * 100) + 1);
+  //var userGuess = null;
+  $(".js-guess-button, button").click(function() {
+
+    var userGuess = $('#user-guess').val();
+    //console.log(userGuess);
+    //$('#user-guess').text("");
+    $('.first-line').text("Your last guess was:")
+    $('.guess-text').text(userGuess);
   });
 });
 
