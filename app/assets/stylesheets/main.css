@@ -37,7 +37,7 @@ h3 {
   display: inline;
 }
 
-.guess-text {
+.js-guess-text {
   color: #EB008B;
 }
 
@@ -56,12 +56,12 @@ h3 {
   color: #FFFFFF;
 } */
 
-.button {
+/* .button {
   color: #FFFFFF;
   background-color: #929497;
   border-radius: 50px;
   border-color: 0;
-}
+} */
 
 .js-clear-button {
   color: #FFFFFF;

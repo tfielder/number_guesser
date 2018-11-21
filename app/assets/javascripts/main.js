@@ -6,22 +6,45 @@ $(document).ready(function() {
   //Guess Button
   $(".js-guess-button").click(function() {
     var userGuess = $('#user-guess').val();
-    
-    if (userGuess < aRandomNumber) {
-      $('.result-line').text("That is too low");
-    } else if (userGuess > aRandomNumber) {
-      $('.result-line').text("That is too high");
+    if (isNumber(userGuess)){
+      processGuess(userGuess);
     } else {
-      $('.result-line').text("BOOM!");
+      returnErrorMessage();
     }
-
     $('.first-line').text("Your last guess was");
-    $('.guess-text').text(userGuess);
+    $('.js-guess-text').text(userGuess);
   });
 
   //Clear Button
   $(".js-clear-button").click(function () {
     $('#user-guess').val("");
   });
+
+  //Test for is a number
+  function isNumber(response) {
+    var response = parseInt(response);
+    if (response) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  //Determines if guess is correct, high, or low
+  function processGuess(guess) {
+    if (guess < aRandomNumber) {
+      $('.result-line').text("That is too low");
+    } else if (guess > aRandomNumber) {
+      $('.result-line').text("That is too high");
+    } else {
+      $('.result-line').text("BOOM!");
+    }
+  }
+
+  //Returns an error message if the guess is not a valid response
+  function returnErrorMessage() {
+    var message = "That is not a valid response";
+    $('.result-line').text(message);
+  }
 
 });
