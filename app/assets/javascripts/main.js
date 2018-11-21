@@ -10,7 +10,7 @@ $(document).ready(function() {
     } else if (userGuess > aRandomNumber) {
       $('.result-line').text("That is too high");
     } else {
-      $('.result-line').text("You guessed the correct number");
+      $('.result-line').text("BOOM!");
     }
     //$('#user-guess').text("");
     $('.first-line').text("Your last guess was")
