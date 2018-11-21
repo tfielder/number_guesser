@@ -41,45 +41,20 @@ h3 {
   color: #EB008B;
 }
 
-/* .button_selected {
-  background-color: #929497;
-  color: #FFFFFF;
-}
-
-.button_unselected {
+button {
   background-color: #D0D2D3;
   color: #FFFFFF;
+  border-radius: 50px;
+  border-color: 0;
 }
 
-.button_on_hover {
+button:hover {
   background-color: #EB008B;
   color: #FFFFFF;
-} */
-
-/* .button {
-  color: #FFFFFF;
-  background-color: #929497;
-  border-radius: 50px;
-  border-color: 0;
-} */
-
-.js-clear-button {
-  color: #FFFFFF;
-  background-color: #929497;
-  border-radius: 50px;
-  border-color: 0;
 }
 
-.js-guess-button {
-  color: #FFFFFF;
+button:active {
   background-color: #929497;
-  border-radius: 50px;
-  border-color: 0;
+  color: #FFFFFF;
 }
 
-.js-reset-button {
-  color: #FFFFFF;
-  background-color: #929497;
-  border-radius: 50px;
-  border-color: 0;
-}
