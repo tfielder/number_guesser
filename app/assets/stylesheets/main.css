@@ -53,8 +53,15 @@ button:hover {
   color: #FFFFFF;
 }
 
+button:disabled {
+  background-color: blue;
+  color: red;
+}
+
 button:active {
   background-color: #929497;
   color: #FFFFFF;
 }
+
+
 

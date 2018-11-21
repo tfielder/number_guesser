@@ -3,14 +3,11 @@ $(document).ready(function() {
   var aRandomNumber = Math.floor((Math.random() * 100) + 1);
   console.log("random number is " + aRandomNumber);
 
+
   //Guess Button
   $(".js-guess-button").click(function() {
     var userGuess = $('#user-guess').val();
-    if (isNumber(userGuess)){
-      processGuess(userGuess);
-    } else {
-      returnErrorMessage();
-    }
+    validateGuess(userGuess);
     $('.first-line').text("Your last guess was");
     $('.js-guess-text').text(userGuess);
   });
@@ -20,7 +17,20 @@ $(document).ready(function() {
     $('#user-guess').val("");
   });
 
-  //Test for is a number
+  //Processes a Guess
+  function validateGuess(guess) {
+    if (isNumber(guess)){
+      if (numberWithinRange(guess)) {
+        processValidGuess(guess);
+      } else {
+        $('.result-line').text("That number is out of range");
+      }
+    } else {
+      returnErrorMessage();
+    }
+  }
+
+  //Tests if the response is a number
   function isNumber(response) {
     var response = parseInt(response);
     if (response) {
@@ -30,8 +40,17 @@ $(document).ready(function() {
     }
   }
 
+  //Determines if a number is within a valid range
+  function numberWithinRange(guess) {
+    if (0 <= guess && guess<= 100){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   //Determines if guess is correct, high, or low
-  function processGuess(guess) {
+  function processValidGuess(guess) {
     if (guess < aRandomNumber) {
       $('.result-line').text("That is too low");
     } else if (guess > aRandomNumber) {
@@ -47,4 +66,11 @@ $(document).ready(function() {
     $('.result-line').text(message);
   }
 
+  // $('#user-guess').change(function () {
+  //   if ($(this).val() === '') {
+  //     $('.js-clear-button').prop('disabled', true);
+  //   } else {
+  //     $('.js-clear-button').prop('disabled', false);
+  //   }
+  // });
 });
