@@ -62,3 +62,24 @@ h3 {
   border-radius: 50px;
   border-color: 0;
 }
+
+.js-clear-button {
+  color: #FFFFFF;
+  background-color: #929497;
+  border-radius: 50px;
+  border-color: 0;
+}
+
+.js-guess-button {
+  color: #FFFFFF;
+  background-color: #929497;
+  border-radius: 50px;
+  border-color: 0;
+}
+
+.js-reset-button {
+  color: #FFFFFF;
+  background-color: #929497;
+  border-radius: 50px;
+  border-color: 0;
+}
