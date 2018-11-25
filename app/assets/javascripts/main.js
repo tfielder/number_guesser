@@ -1,8 +1,5 @@
 $(document).ready(function() {
-  console.log("JavaScript is connected");
   var aRandomNumber = Math.floor((Math.random() * 100) + 1);
-  console.log("random number is " + aRandomNumber);
-
 
   //Guess Button
   $(".js-guess-button").click(function() {
