@@ -1,10 +1,29 @@
 $(document).ready(function() {
   var aRandomNumber = 0;
   var wins = 0;
+  var min = 0;
+  var max = 0;
 
-  var aRandomNumber = Math.floor((Math.random() * 100) + 1);
+  //Max and Min button
+  $(".js-min-max-button").click(function() {
+    var user_min = parseInt($('#min-number').val());
+    var user_max = parseInt($('#max-number').val());
+    if ((isNumber(user_min)) && (isNumber(user_max)) && (user_min < user_max)) {
+      min = user_min;
+      max = user_max;
+      generateRandomNumber(min, max);
+      $(".max-min").hide();
+    } else {
+      $('.min-max-verify').text("One of those values doesn't seem to work, try again.");
+    }
+  });
 
-  console.log("random num is " + aRandomNumber);
+  //generates a random number
+  function generateRandomNumber(mini, maxi) {
+    aRandomNumber = Math.floor(Math.random() * (maxi - mini + 1)) + mini;
+    console.log("random num is " + aRandomNumber);
+  }
+
   //Guess Button
   $(".js-guess-button").click(function() {
     var userGuess = $('#user-guess').val();
@@ -21,10 +40,9 @@ $(document).ready(function() {
   //Reset button
   $(".js-reset-button").click(function () {
     $('#user-guess').val("");
-    $('.result-line').text("")
-    $('.first-line').text("Page reset")
-    aRandomNumber = Math.floor((Math.random() * 100) + 1);
-    console.log("random num is now " + aRandomNumber);
+    $('.result-line').text("");
+    $('.first-line').text("Page reset");
+    generateRandomNumber(min, max);
   });
 
   //Processes a Guess
@@ -75,7 +93,7 @@ $(document).ready(function() {
 
   //Returns an error message if the guess is not a valid response
   function returnErrorMessage() {
-    $('.result-line').text("That is not a valid response")
+    $('.result-line').text("That is not a valid response");
   }
 
   // $('#user-guess').change(function () {
