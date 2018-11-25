@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#Author: Tim Fielder (based off of turing.io number guesser challenge)
+#Date: 11.25.18
+#Version: 1.0
 
-Things you may want to cover:
+#Description
+Number Guesser is a simple game in which a player may specify a given minimum
+and maximum number range and the browser will generate a random number for the
+player to guess. Upon successfully guessing the correct randomly generated number,
+the range of numbers is increased. The game will validate that a user successfully
+selects a numerical value for both the min and max numbers as well as a guess.
 
-* Ruby version
+This project is largely intended to explore the use of JavaScript, JQuery, and CSS
+within a Rails environment.
 
-* System dependencies
+The app was created with Rails 5.2.1.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#To get started:
+Download the files and navigate to the root directory. Run `rails s` from the terminal.
+Navigate to your favorite browser and go to "localhost:3000/".
