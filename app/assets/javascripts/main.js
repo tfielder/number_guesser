@@ -3,6 +3,8 @@ $(document).ready(function() {
   var wins = 0;
   var min = 0;
   var max = 0;
+  $(".part-deux").hide();
+  $(".form-div").hide();
 
   //Max and Min button
   $(".js-min-max-button").click(function() {
@@ -13,6 +15,9 @@ $(document).ready(function() {
       max = user_max;
       generateRandomNumber(min, max);
       $(".max-min").hide();
+      $(".part-deux").show();
+      $(".form-div").show();
+      $('.result-line').text("Type in your guess and click the guess button");
     } else {
       $('.min-max-verify').text("One of those values doesn't seem to work, try again.");
     }
@@ -40,8 +45,9 @@ $(document).ready(function() {
   //Reset button
   $(".js-reset-button").click(function () {
     $('#user-guess').val("");
-    $('.result-line').text("");
-    $('.first-line').text("Page reset");
+    $('.js-guess-text').text("");
+    $('.first-line').text("The game has been reset");
+    $('.result-line').text("A new number was created");
     generateRandomNumber(min, max);
   });
 
@@ -70,7 +76,7 @@ $(document).ready(function() {
 
   //Determines if a number is within a valid range
   function numberWithinRange(guess) {
-    if (0 <= guess && guess<= 100){
+    if (min <= guess && guess<= max){
       return true;
     } else {
       return false;
@@ -84,23 +90,26 @@ $(document).ready(function() {
     } else if (guess > aRandomNumber) {
       $('.result-line').text("That is too high");
     } else {
-      wins += 1;
-      $('.wins').text("Wins: " + wins);
-      $('.result-line').text("BOOM!");
-      $('.js-reset-button').trigger('click');
+      increaseWins();
+      increaseMinMax();
+      $('.result-line').text("BOOM! Click Reset to continue playing");
     }
   }
 
+  //increaseWins
+  function increaseWins() {
+    wins += 1;
+    $('.wins').text("Wins: " + wins);
+  }
+
+  //increase min and max
+  function increaseMinMax() {
+    min -= 10;
+    max += 10;
+  }
   //Returns an error message if the guess is not a valid response
   function returnErrorMessage() {
     $('.result-line').text("That is not a valid response");
   }
 
-  // $('#user-guess').change(function () {
-  //   if ($(this).val() === '') {
-  //     $('.js-clear-button').prop('disabled', true);
-  //   } else {
-  //     $('.js-clear-button').prop('disabled', false);
-  //   }
-  // });
 });
