@@ -1,6 +1,7 @@
 $(document).ready(function() {
   var aRandomNumber = Math.floor((Math.random() * 100) + 1);
-
+  var wins = 0;
+  console.log("random num is " + aRandomNumber);
   //Guess Button
   $(".js-guess-button").click(function() {
     var userGuess = $('#user-guess').val();
@@ -53,14 +54,15 @@ $(document).ready(function() {
     } else if (guess > aRandomNumber) {
       $('.result-line').text("That is too high");
     } else {
+      wins += 1;
+      $('.wins').text("Wins: " + wins);
       $('.result-line').text("BOOM!");
     }
   }
 
   //Returns an error message if the guess is not a valid response
   function returnErrorMessage() {
-    var message = "That is not a valid response";
-    $('.result-line').text(message);
+    $('.result-line').text("That is not a valid response")
   }
 
   // $('#user-guess').change(function () {
