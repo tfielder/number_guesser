@@ -41,11 +41,24 @@ h3 {
   color: #EB008B;
 }
 
+.form-div {
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+}
+
+#user-guess {
+  width: 100%;
+}
+
 button {
   background-color: #D0D2D3;
   color: #FFFFFF;
   border-radius: 50px;
   border-color: 0;
+  width: 20%;
+  margin: 1em;
+  padding: 0.5em;
 }
 
 button:hover {
