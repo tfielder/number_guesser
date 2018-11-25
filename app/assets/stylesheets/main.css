@@ -18,6 +18,10 @@ h3 {
   margin: 0;
 }
 
+#user-guess {
+  width: 100%;
+}
+
 .header {
   background-color: #404041;
   text-align: center;
@@ -41,11 +45,19 @@ h3 {
   color: #EB008B;
 }
 
+.form-div {
+  width: 40%;
+  display: inline-block;
+  text-align: center;
+}
+
 button {
   background-color: #D0D2D3;
   color: #FFFFFF;
   border-radius: 50px;
   border-color: 0;
+  width: 25%;
+  margin: 1em;
 }
 
 button:hover {

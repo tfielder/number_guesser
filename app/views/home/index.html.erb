@@ -1,17 +1,28 @@
 <h1 class="header"><section class="primary-font">Number</section><seciton class="secondary-font">Guesser</seciton></h1>
 
-<form action="/" method="get">
-    <input type="text" name="user-input" id="user-guess" placeholder="Enter your guess" />
-    <!-- <button type="submit" class="button" class="guess_button">Guess</button> -->
-    <button type="button" class="js-guess-button" class="button">Guess</button>
-    <!-- <button type="reset" class="button">Clear</button> -->
-    <button type="button" class="js-clear-button" class="button">Clear</button>
-</form>
+<div class="max-min">
+  <input type="text" name="user-min" id="min-number" placeholder="Minimum Number" />
+  <input type="text" name="user-max" id="max-number" placeholder="Maximum Number" />
+  <button type="button" class="js-min-max-button" class="button">Submit</button>
+  <h2 class="min-max-verify"></h2>
+</div>
+
+<div class="form-div" class="part-deux">
+  <form action="/" method="get">
+      <input type="text" name="user-input" id="user-guess" placeholder="Enter your guess" />
+      <button type="button" class="js-guess-button" class="button">Guess</button>
+      <button type="button" class="js-clear-button" class="button">Clear</button>
+  </form>
+</div>
 
 <h2 class="first-line">Play Number Guesser</h2>
 <h3 class="js-guess-text" class="guess-text">:0)</h3>
-<h2 class="result-line">Type in your guess and click guess</h2>
+<h2 class="result-line">Start by typing your min and max values.</h2>
 
-<form action='/' method='get'>
-  <button type="submit" class="js-reset-button" class="button">Reset</button>
-</form>
+<div class="part-deux">
+  <form action='/' method='get'>
+    <button type="button" class="js-reset-button" class="button">Reset</button>
+  </form>
+
+  <h2 class="wins">Wins: 0</h2>
+</div>
