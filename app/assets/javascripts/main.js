@@ -1,6 +1,9 @@
 $(document).ready(function() {
-  var aRandomNumber = Math.floor((Math.random() * 100) + 1);
+  var aRandomNumber = 0;
   var wins = 0;
+
+  var aRandomNumber = Math.floor((Math.random() * 100) + 1);
+
   console.log("random num is " + aRandomNumber);
   //Guess Button
   $(".js-guess-button").click(function() {
@@ -13,6 +16,15 @@ $(document).ready(function() {
   //Clear Button
   $(".js-clear-button").click(function () {
     $('#user-guess').val("");
+  });
+
+  //Reset button
+  $(".js-reset-button").click(function () {
+    $('#user-guess').val("");
+    $('.result-line').text("")
+    $('.first-line').text("Page reset")
+    aRandomNumber = Math.floor((Math.random() * 100) + 1);
+    console.log("random num is now " + aRandomNumber);
   });
 
   //Processes a Guess
@@ -57,6 +69,7 @@ $(document).ready(function() {
       wins += 1;
       $('.wins').text("Wins: " + wins);
       $('.result-line').text("BOOM!");
+      $('.js-reset-button').trigger('click');
     }
   }
 
